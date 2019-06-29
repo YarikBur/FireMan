@@ -1,4 +1,5 @@
-# FireMan
+# FireMan [![Build Status](https://img.shields.io/badge/Version-2019.06.29--1-yellow.svg)](#FireMan)
+
 ![FireMan Logo](https://github.com/YarikBur/FireMan/blob/master/img/FireMan.png)
 Переделка игры FireMan после LD 39
 

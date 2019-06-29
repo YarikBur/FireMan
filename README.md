@@ -1,5 +1,5 @@
 # FireMan
-Переделка игры FireMan после LD 42
+Переделка игры FireMan после LD 39
 
 <hr>
 

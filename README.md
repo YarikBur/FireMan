@@ -10,7 +10,7 @@
 ###### Скачать [LibGDX](https://libgdx.badlogicgames.com/ci/nightlies/libgdx-nightly-20190628.zip)
 ###### Скачать [Android Studio](https://developer.android.com/studio)
 ###### [Wiki](https://github.com/YarikBur/FireMan/wiki)
-###### [Виды версий](#Виды версий)
+###### [Виды версий](#версии-проекта)
 
 ## Установка проекта
 
@@ -43,7 +43,7 @@
 
 Ещё надо будет воспользоваться [этой статьей](http://developer.alexanderklimov.ru/android/games/libgdx/setup.php) для подключения проекта в Android Studio и настройки IDE, чтобы она умела запускать проект не только для Android'a, но и для ПК.
 
-## Виды версий
+## Версии проекта
 ![Build Status Alpha](https://img.shields.io/badge/build-alpha-red.svg)
 ![Build Status Beta](https://img.shields.io/badge/build-beta-orange.svg)
 ![Build Status Release](https://img.shields.io/badge/build-release-green.svg)

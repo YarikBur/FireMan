@@ -1,4 +1,4 @@
-# FireMan [![Build Status](https://img.shields.io/badge/Version-2019.07.01--1-yellow.svg)](#FireMan)
+# FireMan [![Build Status](https://img.shields.io/badge/Version-2019.07.01--1-red.svg)](#FireMan)
 
 ![FireMan Logo](https://github.com/YarikBur/FireMan/blob/master/img/FireMan.png)
 Переделка игры FireMan после LD 39
@@ -10,6 +10,7 @@
 ###### Скачать [LibGDX](https://libgdx.badlogicgames.com/ci/nightlies/libgdx-nightly-20190628.zip)
 ###### Скачать [Android Studio](https://developer.android.com/studio)
 ###### [Wiki](https://github.com/YarikBur/FireMan/wiki)
+###### [Виды версий](#Виды версий)
 
 ## Установка проекта
 
@@ -41,3 +42,8 @@
 | --- |
 
 Ещё надо будет воспользоваться [этой статьей](http://developer.alexanderklimov.ru/android/games/libgdx/setup.php) для подключения проекта в Android Studio и настройки IDE, чтобы она умела запускать проект не только для Android'a, но и для ПК.
+
+## Виды версий
+![Build Status Alpha](https://img.shields.io/badge/build-alpha-red.svg)
+![Build Status Beta](https://img.shields.io/badge/build-beta-orange.svg)
+![Build Status Release](https://img.shields.io/badge/build-release-green.svg)

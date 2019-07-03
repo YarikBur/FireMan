@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import ru.sgs.fireman.Menu.MainMenu;
 
-public class Main extends Game {
+public class MainPC extends Game {
 	private SpriteBatch batch;
 
 	MainMenu menu;
@@ -18,7 +18,7 @@ public class Main extends Game {
 	public void create () {
 		batch = new SpriteBatch();
 
-		menu = new MainMenu(batch);
+		menu = new MainMenu(batch, true);
 
 		setScreen(menu);
 	}

@@ -21,10 +21,16 @@ public class MainMenu implements Screen {
     private Sprite background[][] = new Sprite[6][2];
     private Texture sun;
 
-    public MainMenu(SpriteBatch batch){
-        this.batch = batch;
-        shape = new ShapeRenderer();
+    //Device
+    //true - PC
+    //false - Android
+    private boolean device;
 
+    public MainMenu(SpriteBatch batch, boolean device){
+        this.device = device;
+        this.batch = batch;
+
+        shape = new ShapeRenderer();
         logo = new Texture("FireManLogo.png");
         sun = new Texture("background/sun.png");
 
@@ -73,7 +79,10 @@ public class MainMenu implements Screen {
         batch.draw(logo, ((widthWindow/2)-(logo.getWidth()/2)), ((heightWindow/2)+logo.getHeight()));
 
         //Кнопки
-
+        if (device)
+            ru.sgs.fireman.Menu.ButtonPC.render();
+        else
+            ru.sgs.fireman.Menu.ButtonAndoid.render();
 
         batch.end();
     }

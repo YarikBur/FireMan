@@ -89,6 +89,8 @@ public class MainMenu implements Screen {
 
     @Override
     public void dispose(){
+        ru.sgs.fireman.Menu.ButtonPC.dispose();
+        ru.sgs.fireman.Menu.ButtonAndoid.dispose();
         batch.dispose();
         logo.dispose();
     }

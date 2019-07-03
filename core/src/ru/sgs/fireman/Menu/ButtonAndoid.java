@@ -5,4 +5,8 @@ public class ButtonAndoid {
     public static void render(){
 
     }
+
+    public static void dispose(){
+
+    }
 }

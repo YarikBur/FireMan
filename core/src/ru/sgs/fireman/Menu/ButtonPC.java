@@ -6,4 +6,7 @@ public class ButtonPC {
 
     }
 
+    public static void dispose(){
+
+    }
 }

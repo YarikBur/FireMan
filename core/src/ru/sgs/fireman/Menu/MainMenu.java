@@ -12,7 +12,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 public class MainMenu implements Screen {
 
     private SpriteBatch batch;
-    private Texture logo;
+    private Sprite logo;
     private ShapeRenderer shape;
     private int widthWindow;
     private int heightWindow;
@@ -20,6 +20,9 @@ public class MainMenu implements Screen {
     private final float speedBackground = 1;
     private Sprite background[][] = new Sprite[6][2];
     private Texture sun;
+
+    private ButtonPC buttonPC;
+    private ButtonAndroid buttonAndroid;
 
     //Device
     //true - PC
@@ -30,8 +33,11 @@ public class MainMenu implements Screen {
         this.device = device;
         this.batch = batch;
 
+        buttonPC = new ButtonPC();
+        buttonAndroid = new ButtonAndroid();
+
         shape = new ShapeRenderer();
-        logo = new Texture("FireManLogo.png");
+        logo = new Sprite(new Texture("FireManLogo.png"));
         sun = new Texture("background/sun.png");
 
         widthWindow = Gdx.app.getGraphics().getWidth();
@@ -43,6 +49,9 @@ public class MainMenu implements Screen {
             background[i][0].setX(0);
             background[i][1].setX(background[i][0].getWidth());
         }
+
+        if (!device)
+            logo.scale(1.125f);
     }
 
     @Override
@@ -76,23 +85,29 @@ public class MainMenu implements Screen {
         }
 
         //Лого FireMan
-        batch.draw(logo, ((widthWindow/2)-(logo.getWidth()/2)), ((heightWindow/2)+logo.getHeight()));
+        logo.setX(((widthWindow/2)-(logo.getWidth()/2)));
+        logo.setY(((heightWindow/2)+logo.getHeight()));
+        logo.draw(batch);
 
         //Кнопки
         if (device)
-            ru.sgs.fireman.Menu.ButtonPC.render();
+            buttonPC.render(batch);
         else
-            ru.sgs.fireman.Menu.ButtonAndoid.render();
+            buttonAndroid.render(batch);
 
         batch.end();
     }
 
     @Override
     public void dispose(){
-        ru.sgs.fireman.Menu.ButtonPC.dispose();
-        ru.sgs.fireman.Menu.ButtonAndoid.dispose();
+        buttonPC.dispose();
+        buttonAndroid.dispose();
         batch.dispose();
-        logo.dispose();
+        logo.getTexture().dispose();
+        for (int i=0; i<6; i++){
+            background[i][0].getTexture().dispose();
+            background[i][1].getTexture().dispose();
+        }
     }
 
     @Override

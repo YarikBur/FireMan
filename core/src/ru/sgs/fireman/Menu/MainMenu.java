@@ -9,7 +9,12 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
+import ru.sgs.fireman.utlis.Font;
+import ru.sgs.fireman.utlis.Version;
+
 public class MainMenu implements Screen {
+
+    private Version version = new Version();
 
     private SpriteBatch batch;
     private Sprite logo;
@@ -24,15 +29,21 @@ public class MainMenu implements Screen {
     private ButtonPC buttonPC;
     private ButtonAndroid buttonAndroid;
 
+    private Font font;
+
     //Device
     //true - PC
     //false - Android
     private boolean device;
 
     public MainMenu(SpriteBatch batch, boolean device){
+        System.out.println(version.getSubversion() + " v." + version.getVersion());
+        version.writeVersion();
+
         this.device = device;
         this.batch = batch;
 
+        font = new Font();
         buttonPC = new ButtonPC();
         buttonAndroid = new ButtonAndroid();
 
@@ -94,6 +105,8 @@ public class MainMenu implements Screen {
             buttonPC.render(batch);
         else
             buttonAndroid.render(batch);
+
+        font.writeUpperLeft(batch, 1, version.getSubversion() + " v." + version.getVersion());
 
         batch.end();
     }

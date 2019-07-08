@@ -6,7 +6,7 @@ import com.badlogic.gdx.files.FileHandle;
 
 public class Version {
 
-    private FileHandle fileHandle = Gdx.files.internal("Version");
+    private FileHandle fileHandle = Gdx.files.internal("Version.txt");
     private String[] subString;
     private String version;
     private String subversion;

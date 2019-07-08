@@ -224,4 +224,20 @@ public class Font {
         else
             return 48;
     }
+
+    public BitmapFont getLargeFont() {
+        return largeFont;
+    }
+
+    public BitmapFont getMediumFont() {
+        return mediumFont;
+    }
+
+    public BitmapFont getMiniFont(){
+        return miniFont;
+    }
+
+    public BitmapFont getSmallFont() {
+        return smallFont;
+    }
 }

@@ -37,9 +37,6 @@ public class MainMenu implements Screen {
     private boolean device;
 
     public MainMenu(SpriteBatch batch, boolean device){
-        System.out.println(version.getSubversion() + " v." + version.getVersion());
-        version.writeVersion();
-
         this.device = device;
         this.batch = batch;
 

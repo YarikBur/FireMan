@@ -7,7 +7,7 @@
 
 ## Ссылки
 
-###### Скачать [LibGDX](https://libgdx.badlogicgames.com/ci/nightlies/libgdx-nightly-20190628.zip)
+###### Скачать [LibGDX](https://libgdx.badlogicgames.com/ci/nightlies/)
 ###### Скачать [Android Studio](https://developer.android.com/studio)
 ###### [Wiki](https://github.com/YarikBur/FireMan/wiki)
 ###### [Виды версий](#версии-проекта)

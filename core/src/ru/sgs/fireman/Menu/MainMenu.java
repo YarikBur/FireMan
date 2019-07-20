@@ -60,6 +60,11 @@ public class MainMenu implements Screen {
 
         if (!device)
             logo.scale(1.125f);
+
+        if (device)
+            buttonPC.setInputProcessor();
+        else
+            buttonAndroid.setInputProcessor();
     }
 
     @Override

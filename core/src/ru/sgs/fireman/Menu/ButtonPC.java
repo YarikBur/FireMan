@@ -10,15 +10,30 @@ public class ButtonPC {
 
     private Font font;
 
-    public ButtonPC(){
-        font = new Font();
+    private final static int fontSize = 3;
 
+    public void setInputProcessor(){
         Gdx.input.setInputProcessor(new InputAdapter(){
             @Override
             public boolean touchDown (int screenX, int screenY, int pointer, int button){
                 System.out.print("[Touch Down] ScreenX: " + screenX + " ScreenY: " + screenY
                         + " Pointer: " + pointer + " Button: " + button + '\n');
 
+                //Play
+                if (screenX >= Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(fontSize)*2) &&
+                        screenY >= Gdx.app.getGraphics().getHeight()/2 &&
+
+                        screenX <= Gdx.app.getGraphics().getWidth()/2+(font.getFontSize(fontSize)*0.45f) &&
+                        screenY <= Gdx.app.getGraphics().getHeight()/2+font.getFontSize(fontSize))
+                    System.out.print("Play" + '\n');
+
+
+                //Reference
+                if (screenX >= Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(fontSize)*3.6f) &&
+                        screenY >= Gdx.app.getGraphics().getHeight()/2-(font.getFontSize(fontSize)*2))
+                    System.out.print("Reference" + '\n');
+                //Settings
+                //Exit
                 return true;
             }
 
@@ -32,37 +47,41 @@ public class ButtonPC {
         });
     }
 
+    public ButtonPC(){
+        font = new Font();
+    }
+
     public void render(SpriteBatch batch){
         font.printText(
                 batch,
                 "Play",
-                2,
-                Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(2)*2),
+                fontSize,
+                Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(fontSize)*2),
                 Gdx.app.getGraphics().getHeight()/2
         );
 
         font.printText(
                 batch,
                 "Reference",
-                2,
-                Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(2)*3.6f),
-                Gdx.app.getGraphics().getHeight()/2-(font.getFontSize(2)*2)
+                fontSize,
+                Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(fontSize)*3.6f),
+                Gdx.app.getGraphics().getHeight()/2-(font.getFontSize(fontSize)*2)
         );
 
         font.printText(
                 batch,
                 "Setting",
-                2,
-                Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(2)*3f),
-                Gdx.app.getGraphics().getHeight()/2-(font.getFontSize(2)*4)
+                fontSize,
+                Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(fontSize)*3f),
+                Gdx.app.getGraphics().getHeight()/2-(font.getFontSize(fontSize)*4)
         );
 
         font.printText(
                 batch,
                 "Exit",
-                2,
-                Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(2)*2),
-                Gdx.app.getGraphics().getHeight()/2-(font.getFontSize(2)*6)
+                fontSize,
+                Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(fontSize)*2),
+                Gdx.app.getGraphics().getHeight()/2-(font.getFontSize(fontSize)*6)
         );
     }
 

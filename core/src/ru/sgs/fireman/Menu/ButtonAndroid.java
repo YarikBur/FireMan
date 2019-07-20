@@ -10,9 +10,7 @@ public class ButtonAndroid {
 
     private Font font;
 
-    public ButtonAndroid(){
-        font = new Font();
-
+    public void setInputProcessor(){
         Gdx.input.setInputProcessor(new InputAdapter(){
             @Override
             public boolean touchDown (int screenX, int screenY, int pointer, int button){
@@ -30,6 +28,10 @@ public class ButtonAndroid {
                 return true;
             }
         });
+    }
+
+    public ButtonAndroid(){
+        font = new Font();
     }
 
     public void render(SpriteBatch batch){

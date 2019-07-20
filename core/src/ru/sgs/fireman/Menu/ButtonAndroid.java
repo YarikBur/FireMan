@@ -9,6 +9,7 @@ import ru.sgs.fireman.utlis.Font;
 public class ButtonAndroid {
 
     private Font font;
+    private int sizeText = 10;
 
     public void setInputProcessor(){
         Gdx.input.setInputProcessor(new InputAdapter(){
@@ -38,7 +39,7 @@ public class ButtonAndroid {
         font.printText(
                 batch,
                 "To start the game, click on the screen",
-                3,
+                sizeText,
                 Gdx.app.getGraphics().getWidth()/2-(font.getFontSize(3)*11.5f),
                 Gdx.app.getGraphics().getHeight()/2
         );

@@ -9,7 +9,8 @@ import ru.sgs.fireman.utlis.Font;
 public class ButtonAndroid {
 
     private Font font;
-    private int sizeText = 10;
+    private int sizeText = 3;
+    private MainMenu mainMenu;
 
     public void setInputProcessor(){
         Gdx.input.setInputProcessor(new InputAdapter(){
@@ -26,13 +27,17 @@ public class ButtonAndroid {
                 System.out.print("[Touch Up] ScreenX: " + screenX + " ScreenY: " + screenY
                         + " Pointer: " + pointer + " Button: " + button + '\n');
 
+
+
                 return true;
             }
         });
     }
 
-    public ButtonAndroid(){
+    public ButtonAndroid(MainMenu mainMenu){
         font = new Font();
+
+        this.mainMenu = mainMenu;
     }
 
     public void render(SpriteBatch batch){

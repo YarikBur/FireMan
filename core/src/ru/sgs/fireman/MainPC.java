@@ -19,7 +19,7 @@ public class MainPC extends Game {
 	public void create () {
 		version = new Version();
 		batch = new SpriteBatch();
-		menu = new MainMenu(batch, true);
+		menu = new MainMenu(this, batch, true);
 
 		System.out.println(version.getSubversion() + " v." + version.getVersion());
 
